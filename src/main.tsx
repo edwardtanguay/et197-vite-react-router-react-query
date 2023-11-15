@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import "./index.scss";
 import {
-	PageWelcome,
-	loader as pageWelcomeLoader,
-} from "./pages/PageWelcome.tsx";
+	PageReactRouter,
+	loader as pageReactRouterLoader,
+} from "./pages/PageReactRouter.tsx";
 import { PageInfo } from "./pages/PageInfo.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
@@ -24,9 +24,9 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{
-				path: "/welcome",
-				element: <PageWelcome />,
-				loader: pageWelcomeLoader,
+				path: "/react-router",
+				element: <PageReactRouter />,
+				loader: pageReactRouterLoader,
 			},
 			{
 				path: "info",
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/",
-				element: <Navigate to="/welcome" replace />,
+				element: <Navigate to="/react-router" replace />,
 			},
 		],
 	},

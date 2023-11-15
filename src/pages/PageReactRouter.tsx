@@ -9,7 +9,7 @@ export const loader = async () => {
 	).data;
 };
 
-export const PageWelcome = () => {
+export const PageReactRouter = () => {
 	const employees = useLoaderData() as IEmployee[];
 	return (
 		<>
