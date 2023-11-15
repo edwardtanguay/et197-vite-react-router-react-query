@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { IEmployee } from "../interfaces";
 import * as appModel from '../appModel';
 
-export const PageInfo = () => {
+export const PageReactQuery = () => {
 	const employeesQuery = useQuery<IEmployee[]>({
 		queryKey: ["employees"],
 		queryFn: async () => appModel.getEmployees()

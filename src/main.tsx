@@ -10,7 +10,7 @@ import {
 	PageReactRouter,
 	loader as pageReactRouterLoader,
 } from "./pages/PageReactRouter.tsx";
-import { PageInfo } from "./pages/PageInfo.tsx";
+import { PageReactQuery } from "./pages/PageReactQuery.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
 				loader: pageReactRouterLoader,
 			},
 			{
-				path: "info",
-				element: <PageInfo />,
+				path: "react-query",
+				element: <PageReactQuery />,
 			},
 			{
 				path: "about",
