@@ -21,7 +21,7 @@ export const PageInfo = () => {
 					</h2>
 		<ul className="list-disc ml-5">
 					{employeesQuery.data.map((employee) => {
-						return <li>{employee.firstName}</li>;
+						return <li key={employee.employeeID}>{employee.firstName} {employee.lastName}</li>;
 					})}
 		</ul>
 				</>
