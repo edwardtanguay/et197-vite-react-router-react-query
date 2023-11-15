@@ -1,26 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-// import * as tools from "../tools";
 import { IEmployee } from "../interfaces";
-import axios from "axios";
-
-// const _employees = [
-// 	{
-// 		firstName: "111",
-// 	},
-// 	{
-// 		firstName: "222",
-// 	},
-// ];
+import * as appModel from '../appModel';
 
 export const PageInfo = () => {
 	const employeesQuery = useQuery<IEmployee[]>({
 		queryKey: ["employees"],
-		queryFn: async () =>
-			(
-				await axios.get(
-					"https://edwardtanguay.vercel.app/share/employees.json"
-				)
-			).data as IEmployee[],
+		queryFn: async () => appModel.getEmployees()
 	});
 
 	if (employeesQuery.isLoading) return <p>loading...</p>;
@@ -34,11 +19,11 @@ export const PageInfo = () => {
 					<h2 className="mb-3 text-2xl">
 						There are {employeesQuery.data.length} employees.
 					</h2>
-					<ul className="list-disc ml-5">
-						{employeesQuery.data.map((employee) => {
-							return <li>{employee.firstName}</li>;
-						})}
-					</ul>
+		<ul className="list-disc ml-5">
+					{employeesQuery.data.map((employee) => {
+						return <li>{employee.firstName}</li>;
+					})}
+		</ul>
 				</>
 			)}
 		</>
