@@ -1,11 +1,21 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from "react-router-dom";
 import "./index.scss";
-import { PageWelcome, loader as pageWelcomeLoader } from "./pages/PageWelcome.tsx";
+import {
+	PageWelcome,
+	loader as pageWelcomeLoader,
+} from "./pages/PageWelcome.tsx";
 import { PageInfo } from "./pages/PageInfo.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
 	{
@@ -16,7 +26,7 @@ const router = createBrowserRouter([
 			{
 				path: "/welcome",
 				element: <PageWelcome />,
-				loader: pageWelcomeLoader
+				loader: pageWelcomeLoader,
 			},
 			{
 				path: "info",
@@ -35,5 +45,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<RouterProvider router={router} />
+	<QueryClientProvider client={queryClient}>
+		<RouterProvider router={router} />
+	</QueryClientProvider>
 );
