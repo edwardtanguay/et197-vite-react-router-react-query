@@ -17,11 +17,11 @@ export const PageInfo = () => {
 			{employeesQuery.data && (
 				<>
 					<h2 className="mb-3 text-2xl">
-						There are {employeesQuery.data.length} employees.
+						There are {employeesQuery.data.length} employees loaded with React Query.
 					</h2>
 		<ul className="list-disc ml-5">
 					{employeesQuery.data.map((employee) => {
-						return <li key={employee.employeeID}>{employee.firstName} {employee.lastName}</li>;
+						return <li key={employee.employeeID}>{employee.lastName}, {employee.firstName} </li>;
 					})}
 		</ul>
 				</>
