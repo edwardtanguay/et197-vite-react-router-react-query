@@ -1,1 +1,1 @@
-# §et197-vite-react-router-react-query
+# et197-vite-react-router-react-query
