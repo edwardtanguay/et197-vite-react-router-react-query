@@ -3629,5 +3629,77 @@
       "description": "together with React and Vue.js one of the three most popular JavaScript frameworks",
       "id": 329
     }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "front": "fff",
+      "back": "bbb"
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 2
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 3
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 4
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 5
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 6
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 7
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 8
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 9
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 10
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 11
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 12
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 13
+    },
+    {
+      "front": "fff",
+      "back": "ccc",
+      "id": 14
+    }
   ]
 }
