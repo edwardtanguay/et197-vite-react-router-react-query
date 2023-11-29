@@ -1,0 +1,4 @@
+- .. add PageFlashcards
+- add flashcards to db.json
+- load flashcards and display
+- model add flashcards

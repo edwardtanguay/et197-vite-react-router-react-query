@@ -2,9 +2,14 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import * as skillModel from "../dataModel/skillModel";
 import { INewSkill, ISkill } from "../interfaces";
 import { wait } from "../tools";
+import { useEffect } from "react";
 
 export const PageSkills = () => {
 	const queryClient = useQueryClient();
+
+	useEffect(() => {
+		queryClient.invalidateQueries({ queryKey: ["skills"] });
+	}, [queryClient]);
 
 	const skillsQuery = useQuery<ISkill[]>({
 		queryKey: ["skills"],
@@ -21,7 +26,7 @@ export const PageSkills = () => {
 					"together with React and Vue.js one of the three most popular JavaScript frameworks",
 			};
 			skillModel.addSkill(skill);
-			queryClient.invalidateQueries();
+			queryClient.invalidateQueries({ queryKey: ["skills"] });
 		},
 	});
 

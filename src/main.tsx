@@ -15,6 +15,7 @@ import { Page404 } from "./pages/Page404.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { PageSkills } from "./pages/PageSkills.tsx";
+import { PageFlashcards } from "./pages/PageFlashcards.tsx";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 			{
 				path: "skills",
 				element: <PageSkills />,
+			},
+			{
+				path: "flashcards",
+				element: <PageFlashcards />,
 			},
 			{
 				path: "error",

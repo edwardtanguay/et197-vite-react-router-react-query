@@ -6,6 +6,7 @@ export const Nav = () => {
 			<li><NavLink to="/react-router">React Router</NavLink></li>
 			<li><NavLink to="/react-query">React Query</NavLink></li>
 			<li><NavLink to="/skills">Skills</NavLink></li>
+			<li><NavLink to="/flashcards">Flashcards</NavLink></li>
 		</ul>
 	</nav>;
 };
