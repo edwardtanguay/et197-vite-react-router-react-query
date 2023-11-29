@@ -11,10 +11,10 @@ import {
 	loader as pageReactRouterLoader,
 } from "./pages/PageReactRouter.tsx";
 import { PageReactQuery } from "./pages/PageReactQuery.tsx";
-import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { PageSkills } from "./pages/PageSkills.tsx";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -42,8 +42,8 @@ const router = createBrowserRouter([
 				element: <PageReactQuery />,
 			},
 			{
-				path: "about",
-				element: <PageAbout />,
+				path: "skills",
+				element: <PageSkills />,
 			},
 			{
 				path: "error",

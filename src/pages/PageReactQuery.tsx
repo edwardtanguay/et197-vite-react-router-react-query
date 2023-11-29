@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { IEmployee } from "../interfaces";
-import * as appModel from "../dataModel/employeeModel";
+import * as employeeModel from "../dataModel/employeeModel";
 import { wait } from "../tools";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,7 @@ export const PageReactQuery = () => {
 
 	const employeesQuery = useQuery<IEmployee[]>({
 		queryKey: ["employees"],
-		queryFn: () => wait(1000).then(() => appModel.getEmployees()),
+		queryFn: () => wait(1000).then(() => employeeModel.getEmployees()),
 	});
 
 	if (employeesQuery.isLoading) {
