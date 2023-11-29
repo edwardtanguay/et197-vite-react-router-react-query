@@ -16,21 +16,13 @@ export const getSkills = async () => {
 	});
 };
 
-export const addSkill = async () => {
+export const addSkill = async (skill: INewSkill) => {
 	return new Promise<string>((resolve, reject) => {
 		(async () => {
 			try {
 				const headers = {
 					"Access-Control-Allow-Origin": "*",
 					"Content-Type": "application/json",
-				};
-
-				const skill:INewSkill = {
-					idCode: "from app3",
-					name: "NEW SKILL: " + (new Date()).toISOString(),
-					url: "https://onespace.pages.dev/techItems?id=36",
-					description:
-						"together with React and Vue.js one of the three most popular JavaScript frameworks",
 				};
 
 				const response = await axios.post(
