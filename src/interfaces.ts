@@ -4,10 +4,13 @@ export interface IEmployee {
 	lastName: string;
 }
 
-export interface ISkill {
-	id: number;
+export interface INewSkill {
 	idCode: string;
 	name: string;
 	url: string;
-	descriptoin: string;
+	description: string;
+}
+
+export interface ISkill extends INewSkill {
+	id: number;
 }

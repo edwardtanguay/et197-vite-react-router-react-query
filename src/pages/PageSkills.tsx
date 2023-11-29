@@ -17,7 +17,10 @@ export const PageSkills = () => {
 					: "Loading..."}
 			</p>
 		);
+	} else {
+		skillModel.addSkill();
 	}
+	
 	return (
 		<>
 			{skillsQuery.data && skillsQuery.data.length > 0 && (
